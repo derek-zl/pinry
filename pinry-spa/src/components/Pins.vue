@@ -58,7 +58,7 @@
                             </span>
                           </template>
                         </template>
-                        • <a :href="item.referer" target="_blank">{{ $t("sourceLink") }}</a>
+                        <span v-if="item.referer">• <a :href="item.referer" target="_blank">{{ $t("sourceLink") }}</a></span>
                       </span>
                     </div>
                     <div class="is-clearfix"></div>
@@ -348,6 +348,7 @@ $avatar-height: 30px;
 }
 .pin-footer {
   position: relative;
+  overflow-wrap: break-word;
   top: $pin-footer-position-fix;
   background-color: white;
   border-radius: 0 0 3px 3px ;
